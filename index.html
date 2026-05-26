@@ -45,10 +45,26 @@
         }
 
         .bottom-left {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-button {
             color: white;
             font-size: 15px;
             font-family: 'Felix Titling', serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            padding: 5px 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-button:hover {
+            opacity: 0.8;
         }
 
         .bottom-right {
@@ -60,7 +76,7 @@
         }
 
         @media (max-width: 600px) {
-            .bottom-left {
+            .contact-button {
                 font-size: 10px;
             }
 
@@ -71,13 +87,24 @@
             .overlay {
                 padding: 20px;
             }
+
+            .bottom-left {
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <img src="FRFR.jpg" alt="Bonadea" class="hero-image">
     <div class="overlay">
-        <div class="bottom-left">IG: @BONADEAVINUM    MAIL: VINUM@BONADEA.AT</div>
+        <div class="bottom-left">
+            <button class="contact-button" onclick="window.open('https://instagram.com/BONADEAVINUM', '_blank')">
+                IG: @BONADEAVINUM
+            </button>
+            <button class="contact-button" onclick="window.location.href='mailto:VINUM@BONADEA.AT'">
+                MAIL: VINUM@BONADEA.AT
+            </button>
+        </div>
         <div class="bottom-right">BONA DEA</div>
     </div>
 </body>
