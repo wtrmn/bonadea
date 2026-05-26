@@ -77,18 +77,28 @@
             letter-spacing: 2px;
         }
 
-        /* Mobile landscape orientation - rotate 90 degrees */
+        /* Mobile landscape orientation */
         @media (max-width: 768px) and (orientation: landscape) {
-            body {
-                transform: rotate(90deg);
-                transform-origin: center;
-                width: 100vh;
-                height: 100vw;
+            .overlay {
+                flex-direction: row;
+                padding: 20px;
+            }
+
+            .bottom-left {
+                gap: 8px;
+            }
+
+            .contact-button {
+                font-size: 11px;
+            }
+
+            .bottom-right {
+                font-size: 50px;
             }
 
             .hero-image {
-                width: 100vh;
-                height: 100vw;
+                height: 100vh;
+                width: auto;
             }
         }
 
