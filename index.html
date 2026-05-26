@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bonadea</title>
+    <link href="https://fonts.googleapis.com/css2?family=Felix+Titling&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -73,8 +74,25 @@
             font-weight: bold;
             font-family: 'Felix Titling', serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
         }
 
+        /* Mobile landscape orientation - rotate 90 degrees */
+        @media (max-width: 768px) and (orientation: landscape) {
+            body {
+                transform: rotate(90deg);
+                transform-origin: center;
+                width: 100vh;
+                height: 100vw;
+            }
+
+            .hero-image {
+                width: 100vh;
+                height: 100vw;
+            }
+        }
+
+        /* Mobile portrait */
         @media (max-width: 600px) {
             .contact-button {
                 font-size: 10px;
@@ -90,6 +108,21 @@
 
             .bottom-left {
                 gap: 10px;
+            }
+        }
+
+        /* Tablet and small landscape */
+        @media (min-width: 601px) and (max-width: 768px) {
+            .contact-button {
+                font-size: 12px;
+            }
+
+            .bottom-right {
+                font-size: 75px;
+            }
+
+            .overlay {
+                padding: 30px;
             }
         }
     </style>
